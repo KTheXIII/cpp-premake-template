@@ -4,8 +4,8 @@ project 'helloworld'
   staticruntime 'On'
   cppdialect 'C++17'
 
-  targetdir("%{wks.location}/bin/%{cfg.buildcfg}/%{prj.name}")
-  objdir("%{wks.location}/obj/%{cfg.buildcfg}/%{prj.name}")
+  targetdir('%{wks.location}/bin/%{cfg.buildcfg}/%{prj.name}')
+  objdir('%{wks.location}/obj/%{cfg.buildcfg}/%{prj.name}')
 
   dependson {}
 
@@ -21,21 +21,22 @@ project 'helloworld'
     'src',
   }
 
-  filter "system:macosx"
-    system "macosx"
+  links {}
 
-  filter "system:linx"
-    system "linux"
+  filter 'system:macosx'
+    system 'macosx'
 
-  filter "system:windows"
-    system "windows"
+  filter 'system:linx'
+    system 'linux'
 
-  filter "configurations:debug"
-    defines {"_DEBUG"}
-    symbols "On"
+  filter 'system:windows'
+    system 'windows'
 
-  filter "configurations:release"
-    defines {"_RELEASE"}
-    optimize "On"
+  filter 'configurations:debug'
+    defines {'_DEBUG'}
+    symbols 'On'
 
+  filter 'configurations:release'
+    defines {'_RELEASE'}
+    optimize 'On'
 
