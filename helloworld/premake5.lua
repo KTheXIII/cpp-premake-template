@@ -7,6 +7,11 @@ project 'helloworld'
   targetdir('%{wks.location}/bin/%{cfg.buildcfg}/%{prj.name}')
   objdir('%{wks.location}/obj/%{cfg.buildcfg}/%{prj.name}')
 
+  warnings 'Extra'
+  enablewarnings {
+    'pedantic'
+  }
+
   dependson {}
 
   defines {}
