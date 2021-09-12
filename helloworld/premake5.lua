@@ -9,7 +9,11 @@ project 'helloworld'
 
   warnings 'Extra'
   enablewarnings {
-    'pedantic'
+    'all'
+  }
+  buildoptions {
+    '-pedantic',
+    '-Werror'
   }
 
   dependson {}
@@ -38,10 +42,8 @@ project 'helloworld'
     system 'windows'
 
   filter 'configurations:debug'
-    defines {'_DEBUG'}
     symbols 'On'
 
   filter 'configurations:release'
-    defines {'_RELEASE'}
     optimize 'On'
 

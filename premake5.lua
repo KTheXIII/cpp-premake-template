@@ -4,8 +4,6 @@ workspace 'cpp-premake-template'
     'release'
   }
 
--- Include directories
-
 -- Include projects
 include 'helloworld'
 

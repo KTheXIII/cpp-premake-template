@@ -23,6 +23,11 @@
 Makefile
 *.make
 
+## nvim
+.ccls
+.ccls-cache
+compile_commands.json
+
 ## Visual Studio Code
 .vscode
 
