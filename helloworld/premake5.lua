@@ -11,10 +11,6 @@ project 'helloworld'
   enablewarnings {
     'all'
   }
-  buildoptions {
-    '-pedantic',
-    '-Werror'
-  }
 
   dependson {}
 
@@ -31,6 +27,12 @@ project 'helloworld'
   }
 
   links {}
+
+  filter {'not system:windows'}
+    buildoptions {
+      '-pedantic',
+      '-Werror'
+    }
 
   filter 'system:macosx'
     system 'macosx'
