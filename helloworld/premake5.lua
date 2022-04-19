@@ -7,11 +7,6 @@ project 'helloworld'
   targetdir('%{wks.location}/bin/%{cfg.buildcfg}/%{prj.name}')
   objdir('%{wks.location}/obj/%{cfg.buildcfg}/%{prj.name}')
 
-  warnings 'Extra'
-  enablewarnings {
-    'all'
-  }
-
   dependson {}
 
   defines {}
@@ -30,8 +25,11 @@ project 'helloworld'
 
   filter {'not system:windows'}
     buildoptions {
-      '-pedantic',
-      '-Werror'
+      '-Wpedantic',
+      '-Wconversion',
+      '-Wall',
+      '-Wextra',
+      '-Werror',
     }
 
   filter 'system:macosx'
